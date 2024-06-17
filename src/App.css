@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #2196F3 0.5%, white 240px); /* Bronze color */
+   h1 {
+    color: #FFFFFF;
+   }
+}
+
+
+.app-header {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #2196F3;
+}
+
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

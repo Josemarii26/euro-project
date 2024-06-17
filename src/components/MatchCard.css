@@ -1,0 +1,56 @@
+.match-card {
+  background-color: #F5F5F5;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.team-flag {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.team-abbreviation {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.score {
+  font-size: 24px; /* Tamaño del resultado más grande */
+  font-weight: bold;
+}
+
+.result-finished {
+  color: #2196F3; /* Color si el partido ha terminado */
+}
+
+.result-unfinished {
+  color: #CCCCCC; /* Color si el partido no ha terminado */
+}
+
+.details {
+  margin-top: 8px;
+}
+
+.match-date {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666666;
+}

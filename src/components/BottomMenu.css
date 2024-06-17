@@ -1,0 +1,34 @@
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-top-left-radius: 20px; /* Rounded corners on the top-left */
+  border-top-right-radius: 20px; /* Rounded corners on the top-right */
+  box-shadow: 0 10px 16px rgba(33, 150, 243, 0.7); /* Shadow effect */
+}
+
+.bottom-menu button {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.3em;
+  transition: all 0.3s ease;
+  -webkit-appearance: none; /* Elimina estilos predeterminados de iOS */
+  -moz-appearance: none; /* Elimina estilos predeterminados de Firefox */
+  appearance: none; /* Elimina estilos predeterminados de otros navegadores */
+  color: inherit; /* Asegura que el color de los botones herede el color del contenedor */
+  color: rgb(131, 130, 130);
+}
+
+.bottom-menu button.active {
+  color: #007bff;
+}
