@@ -1,6 +1,6 @@
 export const getTeamFlag = (teamName) => {
   switch (teamName) {
-    case "turkey":
+    case "turkiye":
       return "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg";
     case "italy":
       return "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg";
