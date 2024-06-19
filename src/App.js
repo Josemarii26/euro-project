@@ -12,24 +12,25 @@ const App = () => {
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [error, setError] = useState(null); // Nuevo estado para manejar errores
 
-  const checkUpdateTime = () => {
-    const now = new Date();
-    const lastUpdate = new Date(localStorage.getItem('lastUpdateTime'));
-    // eslint-disable-next-line no-mixed-operators
-    const updateAllowed = now.getHours() >= 19 || now.getHours() >= 23 && now.getMinutes() >= 45;
-    const oneDay = 24 * 60 * 60 * 1000;
-    const isNextDay = (now - lastUpdate) >= oneDay;
+  const clearLocalStorageAfterInterval = () => {
+    const now = new Date().getTime();
+    const lastUpdateTime = localStorage.getItem('lastUpdateTime');
 
-    return updateAllowed && isNextDay;
+    if (lastUpdateTime && now - lastUpdateTime > 5 * 60 * 60 * 1000) { // 5 horas en milisegundos
+      localStorage.removeItem('matches');
+      localStorage.removeItem('lastUpdateTime');
+    }
   };
 
   useEffect(() => {
+    clearLocalStorageAfterInterval();
+
     const fetchMatches = async () => {
       const cachedMatches = localStorage.getItem('matches');
       const lastUpdateTime = localStorage.getItem('lastUpdateTime');
       const now = new Date().getTime();
 
-      if (cachedMatches && lastUpdateTime && !checkUpdateTime()) {
+      if (cachedMatches && lastUpdateTime && now - lastUpdateTime < 20000) { // 20 segundos en milisegundos
         setMatches(JSON.parse(cachedMatches));
         return;
       }
