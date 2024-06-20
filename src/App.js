@@ -30,7 +30,7 @@ const App = () => {
       const lastUpdateTime = localStorage.getItem('lastUpdateTime');
       const now = new Date().getTime();
 
-      if (cachedMatches && lastUpdateTime && now - lastUpdateTime < 20000) { // 20 segundos en milisegundos
+      if (cachedMatches && lastUpdateTime && now - lastUpdateTime < 5 * 60 * 60 * 1000) { // 20 segundos en milisegundos
         setMatches(JSON.parse(cachedMatches));
         return;
       }
@@ -41,7 +41,7 @@ const App = () => {
             stage: 'groupStage'
           },
           headers: {
-            'x-rapidapi-key': '6cd7f8fdf5msh4e0ddf18c444eeep1deb90jsnc3d73bae17b2',
+            'x-rapidapi-key': '49c2f24919msh74b99f759fb8b89p125b00jsn71c5c7b8e604',
             'x-rapidapi-host': 'euro-20242.p.rapidapi.com'
           }
         });
