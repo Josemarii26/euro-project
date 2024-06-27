@@ -41,7 +41,7 @@ const App = () => {
             stage: 'groupStage'
           },
           headers: {
-            'x-rapidapi-key': '49c2f24919msh74b99f759fb8b89p125b00jsn71c5c7b8e604',
+            'x-rapidapi-key': 'c695adaf62mshe3a8191309864eep12f511jsn0286b508ad1c',
             'x-rapidapi-host': 'euro-20242.p.rapidapi.com'
           }
         });
